@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>nouran & zeyad Wedding</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: cursive;
+    }
+
+    .hero {
+      background-image: url('https://i.pinimg.com/736x/4c/62/38/4c6238567dd160364eeb814eb6fe071f.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 300px;
+      color: black;
+      text-align: center;
+      padding-top: 100px;
+    }
+
+    .hero2 {
+      background-image: url('https://i.pinimg.com/1200x/5b/2a/2a/5b2a2a300d224708b02563a6fe5bd25c.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 300px;
+      color: white;
+      text-align: center;
+      padding-top: 100px;
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-size: 40px;
+    }
+
+    .hero p {
+      margin: 5px 0;
+    }
+
+    .section {
+      background-color: rgb(192, 178, 178);
+      padding: 40px 20px;
+      text-align: center;
+      overflow: hidden;
+    }
+
+
+    .section img.fixed {
+      width: 100%;
+      max-width: 700px;
+      margin: 20px 0;
+      border-radius: 10px;
+    }
+
+   
+    .section img.movable {
+      width: 100%;
+      max-width: 700px;
+      margin: 20px 0;
+      border-radius: 10px;
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
+    }
+
+    .zoomed {
+      transform: scale(1.2);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    }
+
+    .section p {
+      max-width: 600px;
+      margin: 15px auto;
+    }
+
+    .btn, .btn2 {
+      display: inline-block;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 50px;
+      transition: transform 0.3s ease;
+    }
+
+    .btn {
+      background: white;
+      color: black;
+      margin-top: 30px;
+    }
+
+    .btn2 {
+      background: rgb(0, 0, 0);
+      color: white;
+      margin-top: 15px;
+    }
+
+    .btn:hover, .btn2:hover {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="hero">
+    <h1>Nouran & Zeyad</h1>
+    <p>Are getting married</p>
+    <p><b>15.5.2026</b></p>
+  </div>
+
+  <div class="section">
+    <h2>Nouran & Zeyad</h2>
+    
+    <img class="fixed" src="https://i.pinimg.com/1200x/41/a3/58/41a3580b710b2517f79bca944f1a462a.jpg">
+    <p>
+      We promised to stay together for a lifetime
+      <p>TODAY,</p>We have reached this moment, after overcoming everything together.
+    </p>
+    <a href="#" class="btn">Wedding Details</a>
+  </div>
+
+  <div class="hero2" style="background-image: url('https://i.pinimg.com/1200x/5b/2a/2a/5b2a2a300d224708b02563a6fe5bd25c.jpg');">
+    <h1> You Are Invited</h1>
+    <p>Of course..</p>
+  </div>
+
+  <div class="section">
+    <h2> THE WEDDING</h2>
+   
+    <img class="movable" src="https://i.pinimg.com/1200x/3e/2f/3f/3e2f3f8c7a059103d1047fc0c25d0816.jpg">
+    <h1>Upload our wedding photos here!</h1>
+    <p>
+      Kindly Respond By March, 2033
+    </p>
+    <a href="#" class="btn2">Upload Photos</a>
+  </div>
+
+ 
+  <script>
+
+    const images = document.querySelectorAll(".section img.movable");
+
+    images.forEach(img => {
+      img.addEventListener("mouseover", () => {
+        img.classList.add("zoomed");
+      });
+      img.addEventListener("mouseout", () => {
+        img.classList.remove("zoomed");
+      });
+    });
+  </script>
+
+</body>
+</html>
