@@ -5,10 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nouran & Zeyad Wedding</title>
   <style>
+    /* اتجاه الصفحة */
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, cursive;
       background-color: rgb(192, 178, 178);
+      direction: rtl;
+      overflow-x: hidden;
     }
 
     /* الـ Hero Sections */
@@ -36,7 +39,7 @@
 
     .hero h1, .hero2 h1 {
       margin: 0;
-      font-size: clamp(2rem, 8vw, 3rem); /* حجم خط مرن للموبايل */
+      font-size: clamp(2rem, 8vw, 3rem);
     }
 
     /* تنسيق الأقسام */
@@ -52,13 +55,10 @@
       height: auto;
       border-radius: 15px;
       margin: 20px 0;
-    }
-
-    .section img.movable {
       transition: transform 0.5s ease, box-shadow 0.5s ease;
     }
 
-    .zoomed {
+    .section img.movable:hover {
       transform: scale(1.05);
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     }
@@ -70,7 +70,7 @@
       font-size: 1.1rem;
     }
 
-    /* إصلاح الأزرار وتوحيد شكلها */
+    /* أزرار */
     .btn, .btn2 {
       display: inline-block;
       padding: 14px 35px;
@@ -101,17 +101,38 @@
       opacity: 0.9;
     }
 
-    /* تعديلات خاصة للموبايل (Media Queries) */
+    /* تعديلات خاصة للموبايل */
     @media (max-width: 600px) {
       .hero, .hero2 {
         height: 250px;
       }
-      .section {
-        padding: 40px 15px;
+
+      .hero h1, .hero2 h1 {
+        font-size: 2rem;
       }
+
+      .section {
+        padding: 30px 12px;
+      }
+
+      .section h2 {
+        font-size: 1.6rem;
+      }
+
+      .section p {
+        font-size: 1rem;
+        padding: 0 10px;
+      }
+
       .btn, .btn2 {
-        width: 80%; /* جعل الزر عريضاً ليسهل الضغط عليه في الموبايل */
+        width: 90%;
         padding: 12px 20px;
+        font-size: 1.05rem;
+      }
+
+      .section img {
+        border-radius: 10px;
+        max-width: 100%;
       }
     }
   </style>
@@ -144,16 +165,9 @@
     <h2>THE WEDDING</h2>
     <img class="movable" src="https://i.pinimg.com/1200x/3e/2f/3f/3e2f3f8c7a059103d1047fc0c25d0816.jpg" alt="Wedding Event">
     <h1>Upload our wedding photos here!</h1>
-    <p>Kindly Respond By March, 2026</p> <a href="https://photos.google.com" class="btn2">Upload Photos</a>
+    <p>Kindly Respond By March, 2026</p>
+    <a href="https://photos.google.com" class="btn2">Upload Photos</a>
   </div>
-
-  <script>
-    const images = document.querySelectorAll(".section img.movable");
-    images.forEach(img => {
-      img.addEventListener("mouseover", () => img.classList.add("zoomed"));
-      img.addEventListener("mouseout", () => img.classList.remove("zoomed"));
-    });
-  </script>
 
 </body>
 </html>
